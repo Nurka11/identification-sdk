@@ -8,5 +8,6 @@ target 'AituPassportSDK' do
   pod 'Cordova'
   pod 'CordovaRTC'
   pod 'DigitalIDZoomAuthenticationCordovaPlugin'
+#  pod 'DigitalIDZoomAuthenticationCordovaPlugin', :path => '../DigitalIDZoomAuthenticationCordovaPlugin'
 
 end

@@ -14,6 +14,7 @@
 		AA692BB9253EE1D700069CBB /* AituPassportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA692BB7253EE1D700069CBB /* AituPassportViewController.m */; };
 		AAC2765E259A0FB00013C332 /* AituPassportNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC2765C259A0FB00013C332 /* AituPassportNavigationController.h */; };
 		AAC2765F259A0FB00013C332 /* AituPassportNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC2765D259A0FB00013C332 /* AituPassportNavigationController.m */; };
+		D723336626F3592F000536CF /* AituPassportOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D723336526F3592F000536CF /* AituPassportOptions.m */; };
 		EB0199F9EFE0E6A916FEEF95 /* Pods_AituPassportSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D644BE2EA34528AC2F940E6 /* Pods_AituPassportSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		AAC2765C259A0FB00013C332 /* AituPassportNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AituPassportNavigationController.h; sourceTree = "<group>"; };
 		AAC2765D259A0FB00013C332 /* AituPassportNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AituPassportNavigationController.m; sourceTree = "<group>"; };
 		BDE615997E64F1C3082F4DDF /* Pods-AituPassportSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AituPassportSDK.release.xcconfig"; path = "Target Support Files/Pods-AituPassportSDK/Pods-AituPassportSDK.release.xcconfig"; sourceTree = "<group>"; };
+		D723336426F35919000536CF /* AituPassportOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AituPassportOptions.h; sourceTree = "<group>"; };
+		D723336526F3592F000536CF /* AituPassportOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AituPassportOptions.m; sourceTree = "<group>"; };
 		FA0113F782ACDCCA6361274B /* Pods-AituPassportSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AituPassportSDK.debug.xcconfig"; path = "Target Support Files/Pods-AituPassportSDK/Pods-AituPassportSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,8 @@
 				AA692BAE253EE1B800069CBB /* Info.plist */,
 				AAC2765C259A0FB00013C332 /* AituPassportNavigationController.h */,
 				AAC2765D259A0FB00013C332 /* AituPassportNavigationController.m */,
+				D723336426F35919000536CF /* AituPassportOptions.h */,
+				D723336526F3592F000536CF /* AituPassportOptions.m */,
 			);
 			path = AituPassportSDK;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				AA692BB9253EE1D700069CBB /* AituPassportViewController.m in Sources */,
 				AAC2765F259A0FB00013C332 /* AituPassportNavigationController.m in Sources */,
 				83306E4D257E7EE300A053E3 /* AituNavigationDelegateProxy.m in Sources */,
+				D723336626F3592F000536CF /* AituPassportOptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

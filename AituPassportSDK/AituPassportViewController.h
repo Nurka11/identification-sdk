@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVViewController.h>
 #import <WebKit/WebKit.h>
+#import "AituPassportOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,9 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) WKWebView *wkWebView;
 
 @property(nonatomic, copy) NSString *redirectURL;
+@property(nonatomic, strong, nullable) AituPassportOptions *options;
 
 - (instancetype)init;
-- (instancetype)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl;
+- (instancetype)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl options:(AituPassportOptions *_Nullable)options;
 - (void)setUIDocumentMenuViewControllerSoureViewsIfNeeded:(UIViewController *)viewControllerToPresent;
 
 @end

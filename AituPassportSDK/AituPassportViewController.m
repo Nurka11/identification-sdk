@@ -32,11 +32,14 @@
     return self;
 }
 
-- (instancetype)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl {
+- (instancetype)initWithUrl:(NSString * _Nonnull)url
+                redirectUrl:(NSString *_Nonnull)redirectUrl
+                    options:(AituPassportOptions *_Nullable)options {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.startPage = url;
         self.redirectURL = redirectUrl;
+        self.options = options;
     }
     return self;
 }
@@ -54,6 +57,8 @@
     self.delegateProxy.supplementary = self.delegate;
     self.wkWebView.navigationDelegate = self.delegateProxy;
     hostUrl = self.wkWebView.URL.host;
+    [[NSUserDefaults standardUserDefaults] setValue:self.options.language forKey:@"did-language"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
     
     [self evaluateSetIsSDK];
     [self setBackButton];
@@ -94,6 +99,7 @@
         self.webView.backgroundColor = UIColor.whiteColor;
     }
     [self setBackButtonColor];
+    [self toggleIsAituPassportSDK];
     NSString *urlString = self.wkWebView.URL.absoluteString;
     if ([urlString containsString:self.redirectURL] && ![urlString containsString:@"redirect_uri"]) {
         [timer invalidate];
@@ -127,6 +133,14 @@
         return true;
     }
     return false;
+}
+
+- (void)toggleIsAituPassportSDK {
+    if ([self.wkWebView.URL.host isEqualToString:hostUrl]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"is-aitu-passport-sdk"];
+    }
 }
 
 - (void)evaluateSetIsSDK {
