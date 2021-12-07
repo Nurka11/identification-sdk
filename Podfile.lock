@@ -1,12 +1,12 @@
 PODS:
   - AituWebRTC (0.0.3)
-  - Cordova (6.1.1):
-    - Cordova/Cordova (= 6.1.1)
-  - Cordova/Cordova (6.1.1)
+  - Cordova (6.2.0):
+    - Cordova/Cordova (= 6.2.0)
+  - Cordova/Cordova (6.2.0)
   - CordovaRTC (1.0.5):
     - AituWebRTC
     - Cordova
-  - DigitalIDZoomAuthenticationCordovaPlugin (0.6.0):
+  - DigitalIDZoomAuthenticationCordovaPlugin (0.7.0):
     - Cordova
 
 DEPENDENCIES:
@@ -24,9 +24,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AituWebRTC: f3efdcabb98e57079b35a3b0119ccb30c3a941f3
-  Cordova: eea60c20c8262ae4aecc15e78fe6e03543c2cde4
+  Cordova: 7e83572fd98d1391ce92d93c081ce8d99d8cb014
   CordovaRTC: a6c89600d2b5c4c46bf75a063eaa0a33133a0d3c
-  DigitalIDZoomAuthenticationCordovaPlugin: 48034ca6f950f8a1901fe5f25020ff65fcbbf168
+  DigitalIDZoomAuthenticationCordovaPlugin: 2a2e9d56913d70c1eb2d2bdcb8e44da8199588bf
 
 PODFILE CHECKSUM: 6e07ba5f6db2a1a156ab1774b367a9468ebbdd20
 
