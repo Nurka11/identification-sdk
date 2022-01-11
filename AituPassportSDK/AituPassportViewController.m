@@ -57,7 +57,6 @@
     self.delegateProxy.supplementary = self.delegate;
     self.wkWebView.navigationDelegate = self.delegateProxy;
     hostUrl = self.wkWebView.URL.host;
-    [[NSUserDefaults standardUserDefaults] setValue:self.options.language forKey:@"did-language"];
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
     
     [self evaluateSetIsSDK];
@@ -136,7 +135,10 @@
 }
 
 - (void)toggleIsAituPassportSDK {
-    if ([self.wkWebView.URL.host isEqualToString:hostUrl]) {
+    if ([self.wkWebView.URL.host isEqualToString:hostUrl] || hostUrl == nil) {
+        if (hostUrl == nil) {
+            hostUrl = self.wkWebView.URL.host;
+        }
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
     } else {
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"is-aitu-passport-sdk"];
