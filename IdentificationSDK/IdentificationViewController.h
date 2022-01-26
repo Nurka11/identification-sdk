@@ -1,5 +1,5 @@
 //
-//  AituPassportViewController.h
+//  IdentificationViewController.h
 //  PassportRTCCordovaPlugin
 //
 //  Created by BTSD on 10/20/20.
@@ -8,36 +8,36 @@
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVViewController.h>
 #import <WebKit/WebKit.h>
-#import "AituPassportOptions.h"
+#import "IdentificationOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class AituPassportViewController;
-@protocol AituPassportNavigationDelegate;
+@class IdentificationViewController;
+@protocol IdentificationNavigationDelegate;
 
 
-@protocol AituPassportViewControllerDelegate<NSObject, AituPassportNavigationDelegate>
+@protocol IdentificationViewControllerDelegate<NSObject, IdentificationNavigationDelegate>
 @optional
-- (void)passportViewController:(AituPassportViewController *)viewController didTriggerRedirectUrl:(NSString *)redirectUrl;
+- (void)identificationViewController:(IdentificationViewController *)viewController didTriggerRedirectUrl:(NSString *)redirectUrl;
 @end
 
 
-@interface AituPassportViewController : CDVViewController
+@interface IdentificationViewController : CDVViewController
 
-@property (nonatomic, weak) id <AituPassportViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <IdentificationViewControllerDelegate> delegate;
 @property (nonatomic, readonly) WKWebView *wkWebView;
 
 @property(nonatomic, copy) NSString *redirectURL;
-@property(nonatomic, strong, nullable) AituPassportOptions *options;
+@property(nonatomic, strong, nullable) IdentificationOptions *options;
 
 - (instancetype)init;
-- (instancetype)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl options:(AituPassportOptions *_Nullable)options;
+- (instancetype)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl options:(IdentificationOptions *_Nullable)options;
 - (void)setUIDocumentMenuViewControllerSoureViewsIfNeeded:(UIViewController *)viewControllerToPresent;
 
 @end
 
 
-@protocol AituPassportNavigationDelegate <NSObject>
+@protocol IdentificationNavigationDelegate <NSObject>
 
 @optional
 - (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation;

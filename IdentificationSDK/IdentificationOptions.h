@@ -1,6 +1,6 @@
 //
-//  AituPassportOptions.h
-//  AituPassportSDK
+//  IdentificationOptions.h
+//  IdentificationSDK
 //
 //  Created by Izabek Zinekenov on 16.09.2021.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AituPassportOptions : NSObject
+@interface IdentificationOptions : NSObject
 @property(nullable, nonatomic, copy) NSString *language;
 @end
 
