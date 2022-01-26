@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WKNavigationDelegate.h>
 
-@protocol AituPassportNavigationDelegate;
+@protocol IdentificationNavigationDelegate;
 
 @interface AituNavigationDelegateProxy : NSObject <WKNavigationDelegate>
 
-@property (nonatomic, weak) id<AituPassportNavigationDelegate> supplementary;
+@property (nonatomic, weak) id<IdentificationNavigationDelegate> supplementary;
 
 - (instancetype)initWithOriginal:(id<WKNavigationDelegate>)original;
 

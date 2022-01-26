@@ -1,20 +1,20 @@
 //
-//  AituPassportViewController.m
+//  IdentificationViewController.m
 //  PassportRTCCordovaPlugin
 //
 //  Created by BTSD on 10/20/20.
 //
 
-#import "AituPassportViewController.h"
+#import "IdentificationViewController.h"
 #import "AituNavigationDelegateProxy.h"
 
-@interface AituPassportViewController ()
+@interface IdentificationViewController ()
 
 @property (nonatomic) AituNavigationDelegateProxy *delegateProxy;
 
 @end
 
-@implementation AituPassportViewController {
+@implementation IdentificationViewController {
     NSTimer *timer;
     NSString *hostUrl;
 }
@@ -34,7 +34,7 @@
 
 - (instancetype)initWithUrl:(NSString * _Nonnull)url
                 redirectUrl:(NSString *_Nonnull)redirectUrl
-                    options:(AituPassportOptions *_Nullable)options {
+                    options:(IdentificationOptions *_Nullable)options {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.startPage = url;
@@ -44,7 +44,7 @@
     return self;
 }
 
-- (void)setDelegate:(id<AituPassportViewControllerDelegate>)delegate {
+- (void)setDelegate:(id<IdentificationViewControllerDelegate>)delegate {
     _delegate = delegate;
     self.delegateProxy.supplementary = delegate;
 }
@@ -57,7 +57,6 @@
     self.delegateProxy.supplementary = self.delegate;
     self.wkWebView.navigationDelegate = self.delegateProxy;
     hostUrl = self.wkWebView.URL.host;
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
     
     [self evaluateSetIsSDK];
     [self setBackButton];
@@ -98,11 +97,10 @@
         self.webView.backgroundColor = UIColor.whiteColor;
     }
     [self setBackButtonColor];
-    [self toggleIsAituPassportSDK];
     NSString *urlString = self.wkWebView.URL.absoluteString;
     if ([urlString containsString:self.redirectURL] && ![urlString containsString:@"redirect_uri"]) {
         [timer invalidate];
-        [self.delegate passportViewController:self didTriggerRedirectUrl:urlString];
+        [self.delegate identificationViewController:self didTriggerRedirectUrl:urlString];
     }
 }
 
@@ -134,19 +132,8 @@
     return false;
 }
 
-- (void)toggleIsAituPassportSDK {
-    if ([self.wkWebView.URL.host isEqualToString:hostUrl] || hostUrl == nil) {
-        if (hostUrl == nil) {
-            hostUrl = self.wkWebView.URL.host;
-        }
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"is-aitu-passport-sdk"];
-    } else {
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"is-aitu-passport-sdk"];
-    }
-}
-
 - (void)evaluateSetIsSDK {
-    NSString *script = @"window.isAituPassportSDK = true;";
+    NSString *script = @"window.isIdentificationSDK = true;";
     [self.wkWebView evaluateJavaScript:script completionHandler:nil];
 }
 

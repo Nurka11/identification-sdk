@@ -1,6 +1,6 @@
 #import <WebKit/WKNavigationDelegate.h>
 #import "AituNavigationDelegateProxy.h"
-#import "AituPassportViewController.h"
+#import "IdentificationViewController.h"
 
 @interface AituNavigationDelegateProxy ()
 
