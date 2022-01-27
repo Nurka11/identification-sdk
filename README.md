@@ -16,7 +16,7 @@ Podfile:
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
-pod ‘IdentificationSDK’, ‘2.0.0’
+pod ‘IdentificationSDK’, ‘2.1.0’
 ```
 
 **Зависимости:**
