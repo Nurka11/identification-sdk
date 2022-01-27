@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = 'IdentificationSDK'
-  s.version             = '2.0.0'
+  s.version             = '2.1.0'
   s.summary             = 'Identification SDK'
   s.description         = <<-DESC
 Idetification SDK pod
@@ -8,7 +8,7 @@ Idetification SDK pod
   s.homepage            = 'https://digital-id.kz'
   s.license             = 'MIT'
   s.author              = { 'DigitalID' => 'sergey.frolov@btsdigital.kz' }
-  s.source              = { :git => 'https://github.com/btsdigital/aitu-passport-ios-sdk.git', :tag => "v#{s.version}" }
+  s.source              = { :git => 'https://github.com/btsdigital/identification-sdk.git', :tag => "v#{s.version}" }
   s.source_files        = 'IdentificationSDK/**/*.{h,m,swift}'
   s.dependency          'Cordova'
   s.dependency          'DigitalIDZoomAuthenticationCordovaPlugin', '~> 0.8.0'
