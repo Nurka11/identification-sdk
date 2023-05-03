@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		70D258B3C4B76E3CCA6736F9 /* Pods_IdentificationSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8565ACC95D7C432175C5D9BB /* Pods_IdentificationSDK.framework */; };
 		83306E4C257E7EE300A053E3 /* AituNavigationDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 83306E4A257E7EE300A053E3 /* AituNavigationDelegateProxy.h */; };
 		83306E4D257E7EE300A053E3 /* AituNavigationDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83306E4B257E7EE300A053E3 /* AituNavigationDelegateProxy.m */; };
+		83B0B15529FBE0140041F007 /* FaceTecCordovaSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0B15329FBE0140041F007 /* FaceTecCordovaSDK.m */; };
+		83B0B15629FBE0140041F007 /* FaceTecCordovaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B0B15429FBE0140041F007 /* FaceTecCordovaSDK.h */; };
+		83B0B15829FBE04D0041F007 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0B15729FBE04D0041F007 /* FaceTecSDK.xcframework */; };
+		83B0B15929FBE04D0041F007 /* FaceTecSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0B15729FBE04D0041F007 /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA692BAF253EE1B800069CBB /* IdentificationSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AA692BAD253EE1B800069CBB /* IdentificationSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA692BB8253EE1D700069CBB /* IdentificationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA692BB6253EE1D700069CBB /* IdentificationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA692BB9253EE1D700069CBB /* IdentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA692BB7253EE1D700069CBB /* IdentificationViewController.m */; };
@@ -26,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				83B0B15929FBE04D0041F007 /* FaceTecSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +40,9 @@
 /* Begin PBXFileReference section */
 		83306E4A257E7EE300A053E3 /* AituNavigationDelegateProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AituNavigationDelegateProxy.h; sourceTree = "<group>"; };
 		83306E4B257E7EE300A053E3 /* AituNavigationDelegateProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AituNavigationDelegateProxy.m; sourceTree = "<group>"; };
+		83B0B15329FBE0140041F007 /* FaceTecCordovaSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceTecCordovaSDK.m; sourceTree = "<group>"; };
+		83B0B15429FBE0140041F007 /* FaceTecCordovaSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceTecCordovaSDK.h; sourceTree = "<group>"; };
+		83B0B15729FBE04D0041F007 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
 		8565ACC95D7C432175C5D9BB /* Pods_IdentificationSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdentificationSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADAD1899ED88300DE41E9D7 /* Pods-IdentificationSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdentificationSDK.debug.xcconfig"; path = "Target Support Files/Pods-IdentificationSDK/Pods-IdentificationSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		AA692BAA253EE1B800069CBB /* IdentificationSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdentificationSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B0B15829FBE04D0041F007 /* FaceTecSDK.xcframework in Frameworks */,
 				70D258B3C4B76E3CCA6736F9 /* Pods_IdentificationSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +73,7 @@
 		1B742882F17D52B1B897F834 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83B0B15729FBE04D0041F007 /* FaceTecSDK.xcframework */,
 				8565ACC95D7C432175C5D9BB /* Pods_IdentificationSDK.framework */,
 			);
 			name = Frameworks;
@@ -90,6 +100,8 @@
 		AA692BAC253EE1B800069CBB /* IdentificationSDK */ = {
 			isa = PBXGroup;
 			children = (
+				83B0B15429FBE0140041F007 /* FaceTecCordovaSDK.h */,
+				83B0B15329FBE0140041F007 /* FaceTecCordovaSDK.m */,
 				AA692BB6253EE1D700069CBB /* IdentificationViewController.h */,
 				AA692BB7253EE1D700069CBB /* IdentificationViewController.m */,
 				83306E4A257E7EE300A053E3 /* AituNavigationDelegateProxy.h */,
@@ -122,6 +134,7 @@
 			files = (
 				AA692BB8253EE1D700069CBB /* IdentificationViewController.h in Headers */,
 				AA692BAF253EE1B800069CBB /* IdentificationSDK.h in Headers */,
+				83B0B15629FBE0140041F007 /* FaceTecCordovaSDK.h in Headers */,
 				83306E4C257E7EE300A053E3 /* AituNavigationDelegateProxy.h in Headers */,
 				AAC2765E259A0FB00013C332 /* IdentificationNavigationController.h in Headers */,
 				D775672F277B18FB00AB79D7 /* IdentificationOptions.h in Headers */,
@@ -222,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B0B15529FBE0140041F007 /* FaceTecCordovaSDK.m in Sources */,
 				AA692BB9253EE1D700069CBB /* IdentificationViewController.m in Sources */,
 				AAC2765F259A0FB00013C332 /* IdentificationNavigationController.m in Sources */,
 				83306E4D257E7EE300A053E3 /* AituNavigationDelegateProxy.m in Sources */,

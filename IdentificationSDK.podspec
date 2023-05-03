@@ -10,10 +10,8 @@ Idetification SDK pod
   s.author              = { 'DigitalID' => 'sergey.frolov@btsdigital.kz' }
   s.source              = { :git => 'https://github.com/btsdigital/identification-sdk.git', :tag => "v#{s.version}" }
   s.source_files        = 'IdentificationSDK/**/*.{h,m,swift}'
-  s.dependency          'Cordova'
-  s.dependency          'DigitalIDZoomAuthenticationCordovaPlugin', '~> 0.8.0'
+  s.vendored_frameworks = 'FaceTecSDK.xcframework'
+  s.dependency          'Cordova', '6.2.0'
   s.ios.deployment_target = '11.0'
   s.swift_version         = '5.0'
-  s.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.pod_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
